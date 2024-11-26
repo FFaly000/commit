@@ -1,7 +1,7 @@
 import os
 
 commit = 10
-y = "y"
+y = "n"
 
 i = 0
 while True:
