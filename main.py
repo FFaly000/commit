@@ -1,27 +1,20 @@
-import os
+import subprocess
 
 commit = 1000000
+batch_size = 1000 
 y = "n"
 
 i = 0
-while True:
+while i < commit:
     try:
-        for _ in range(commit):
-            try:
-                os.system(f'git commit --allow-empty -m "Commit {i+1} of {commit}"')
-                i += 1
-            except:
-                print("Error")
-                continue
+        for _ in range(batch_size):
+            subprocess.run(['git', 'commit', '--allow-empty', '-m', f"Commit {i+1} of {commit}"], check=True)
+            i += 1
 
-        print(f"Committed {commit} times. Total commits: {i}")
+        print(f"Committed {batch_size} times. Total commits: {i}")
 
         if y.lower() == "y":
-            try:
-                os.system('git push')
-                print("Push successful")
-            except:
-                print("Error")
-
-    except:
-        print("Error")
+            subprocess.run(['git', 'push'], check=True)
+            print("Push successful")
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}")
