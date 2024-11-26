@@ -3,7 +3,7 @@ from multiprocessing import Process, Lock, Value
 
 c = 1000000
 b = 1000
-n = 4
+n = 6
 
 def w(t, b, l, p):
     while True:
