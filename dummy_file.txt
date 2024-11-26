@@ -5,3 +5,4 @@ Change made at commit 3
 Change made at commit 4
 Change made at commit 5
 Change made at commit 6
+Change made at commit 7
