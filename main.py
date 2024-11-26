@@ -1,6 +1,6 @@
 import os
 
-commit = 1000
+commit = 10
 y = "y"
 
 i = 0
