@@ -1,2 +1,3 @@
 Initial content
 Change made at commit 1
+Change made at commit 2
