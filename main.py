@@ -1,7 +1,7 @@
 import subprocess
 from multiprocessing import Process, Lock, Value
 
-c = 10000000000
+c = 100000000000000000
 b = 1000
 n = 6
 
