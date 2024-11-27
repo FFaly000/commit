@@ -47,4 +47,4 @@ if __name__ == "__main__":
     for p in ps:
         p.join()
 
-    print(f"All commits completed. Total commits: {t.value}")
+    print(f"How did bro finish")
