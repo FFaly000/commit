@@ -1,11 +1,13 @@
 import subprocess
 from multiprocessing import Process, Lock, Value
 
-c = 10000000000
-b = 1000
+c = 100000000000000000
+b = 69696969969696969420
 n = 6
 
+
 def w(t, b, l, p):
+    baia = 0
     while True:
         with l:
             if t.value >= c:
@@ -17,15 +19,26 @@ def w(t, b, l, p):
         try:
             for i in range(s, e + 1):
                 subprocess.run(['git', 'commit', '--allow-empty', '-m', f"Commit {i} of {c}"], check=True)
-            print(f"P{p}: Committed {e - s + 1} commits. Total commits: {t.value}")
+
+            baia += (e - s + 1)
+
+
+            if baia % 6996969696969693434 == 0:
+                subprocess.run(['git', 'push'], check=True)
+                print(f"P{p}: PUSHED like a mother in labor on commit {baia}")
+
+
+            print(f"P{p}: ON{baia} Total: {t.value}")
         except subprocess.CalledProcessError as e:
-            print(f"P{p}: Error: {e}")
+            print(f"P{p}: kys: {e}")
+
 
 if __name__ == "__main__":
     l = Lock()
     t = Value('i', 0)
-
     ps = []
+
+
     for i in range(n):
         p = Process(target=w, args=(t, b, l, i))
         ps.append(p)
@@ -34,4 +47,4 @@ if __name__ == "__main__":
     for p in ps:
         p.join()
 
-    print(f"All commits completed. Total commits: {t.value}")
+    print(f"How did bro finish")
