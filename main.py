@@ -23,7 +23,7 @@ def w(t, b, l, p):
             baia += (e - s + 1)
 
 
-            if baia % 6996969696969693434 == 0:
+            if baia % 1000 == 0:
                 subprocess.run(['git', 'push'], check=True)
                 print(f"P{p}: PUSHED like a mother in labor on commit {baia}")
 
