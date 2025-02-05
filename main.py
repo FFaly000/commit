@@ -47,4 +47,4 @@ if __name__ == "__main__":
     for p in ps:
         p.join()
 
-    print(f"How did bro finish")
+    print(f"How did u...")
