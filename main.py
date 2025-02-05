@@ -23,6 +23,8 @@ def w(t, b):
             print(f"Error: {e}")
             subprocess.run(['rm', '-f', '.git/index.lock'], check=True)
             print("Removed .git/index.lock due to error.")
+            continue
+
 if __name__ == "__main__":
     w(0, b)
     print("Done")
